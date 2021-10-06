@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker build -t hoseinfeiz/dockerapp -f Dockerfile.dev .
+
+script:
+  docker run hoseinfeiz/dockerapp npm run test -- --converge
